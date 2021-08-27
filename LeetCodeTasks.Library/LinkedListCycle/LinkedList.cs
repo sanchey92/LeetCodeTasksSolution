@@ -43,5 +43,19 @@ namespace LeetCodeTasks.Library.LinkedListCycle
             
             return false;
         }
+
+        public Node<T> FindMiddleNode()
+        {
+            var slowPointer = _head;
+            var fastPointer = _head;
+
+            while (fastPointer != null && fastPointer.Next != null)
+            {
+                fastPointer = fastPointer.Next.Next;
+                slowPointer = slowPointer.Next;
+            }
+
+            return slowPointer;
+        }
     }
 }
