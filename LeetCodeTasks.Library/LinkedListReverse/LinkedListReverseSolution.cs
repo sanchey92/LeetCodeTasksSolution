@@ -17,4 +17,4 @@ namespace LeetCodeTasks.Library.LinkedListReverse
             return prev;
         }
     }
-}u
+}
