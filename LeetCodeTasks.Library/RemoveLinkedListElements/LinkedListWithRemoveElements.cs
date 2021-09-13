@@ -47,5 +47,24 @@ namespace LeetCodeTasks.Library.RemoveLinkedListElements
             
             return result.Next;
         }
+
+        public ListNode DeleteDuplicates()
+        {
+            var current = _head;
+
+            while (current != null && current.Next != null)
+            {
+                if (current.Value == current.Next.Value)
+                {
+                    current.Next = current.Next.Next;
+                }
+                else
+                {
+                    current = current.Next;
+                }
+            }
+            
+            return _head;
+        }
     }
 }
